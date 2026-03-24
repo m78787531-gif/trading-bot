@@ -11,12 +11,7 @@ from typing import Dict, List
 from sqlalchemy.orm import Session
 
 from models import Trade, TradeStatus
-from exchanges import get_public_prices
-
-try:
-    from exchanges import TRACKED_SYMBOLS
-except ImportError:
-    TRACKED_SYMBOLS = None
+from exchanges import get_public_prices, TRACKED_SYMBOLS
 
 logger = logging.getLogger(__name__)
 
